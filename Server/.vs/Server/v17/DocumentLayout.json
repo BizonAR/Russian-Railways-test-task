@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F21579F-5224-4E29-A0AC-99A637DB81E3}|Server\\Server.csproj|c:\\users\\mikaa\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\rzd\\server\\server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F21579F-5224-4E29-A0AC-99A637DB81E3}|Server\\Server.csproj|solutionrelative:server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\mikaa\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\rzd\\server\\consoleapp15\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:consoleapp15\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mikaa\\source\\repos\\Server\\Server\\Server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\mikaa\\source\\repos\\Server\\Server\\Server.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Server\\Server\\Server.cs",
+              "ToolTip": "C:\\Users\\mikaa\\source\\repos\\Server\\Server\\Server.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Server\\Server\\Server.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAJQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T20:50:37.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Server\\Server\\Server.cs",
+              "RelativeDocumentMoniker": "Server\\Server.cs",
+              "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Server\\Server\\Server.cs",
+              "RelativeToolTip": "Server\\Server.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAK0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T20:50:29.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Server\\ConsoleApp15\\Server.cs",
+              "RelativeDocumentMoniker": "ConsoleApp15\\Server.cs",
+              "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Server\\ConsoleApp15\\Server.cs",
+              "RelativeToolTip": "ConsoleApp15\\Server.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T07:03:11.187Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
