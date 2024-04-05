@@ -1,14 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 class ServerSocket
 {
-	private static bool _isRunning = true; // Флаг для контроля состояния сервера
-	private static TcpListener _server;
+	private static bool s_isRunning = true; // Флаг для контроля состояния сервера
+	private static TcpListener s_server;
 
 	public static void Main(string[] args)
 	{
@@ -20,38 +17,31 @@ class ServerSocket
 
 			Console.WriteLine("Waiting for connections...");
 
-			Task.Run(() => ListenForClients()); // Запускаем обработку клиентов в отдельном потоке
+			Task.Run(() => ListenForClients());
 
-			// Главный поток продолжает выполнение, выводя сообщение "Waiting for connections..."
-			// При этом, в отдельном потоке выполняется прослушивание подключений
-
-			// Добавляем здесь код, который может выполняться параллельно с обработкой клиентов
-
-			// Программа завершится только если флаг _isRunning станет false
-			while (_isRunning)
+			while (s_isRunning)
 			{
-				// Добавьте здесь любую другую логику, которую вы хотите выполнять в главном потоке
 			}
 
 			StopServer();
 			Console.WriteLine("Server closed.");
 		}
-		catch (Exception ex)
+		catch (Exception exception)
 		{
-			Console.WriteLine("Error: " + ex.Message);
+			Console.WriteLine("Error: " + exception.Message);
 		}
 	}
 
 	private static void StartServer()
 	{
 		IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-		_server = new TcpListener(ipAddress, 0);
-		_server.Start();
+		s_server = new TcpListener(ipAddress, 0);
+		s_server.Start();
 	}
 
 	private static void ShowServerInfo()
 	{
-		IPEndPoint localEndPoint = (IPEndPoint)_server.LocalEndpoint;
+		IPEndPoint localEndPoint = (IPEndPoint)s_server.LocalEndpoint;
 		Console.WriteLine("Server is running...");
 		Console.WriteLine("IP Address: " + localEndPoint.Address);
 		Console.WriteLine("Port: " + localEndPoint.Port);
@@ -59,7 +49,7 @@ class ServerSocket
 
 	private static void StopServer()
 	{
-		_server?.Stop();
+		s_server?.Stop();
 		Console.WriteLine("Server stopped.");
 	}
 
@@ -67,17 +57,22 @@ class ServerSocket
 	{
 		try
 		{
-			while (_isRunning)
+			while (s_isRunning)
 			{
-				TcpClient client = _server.AcceptTcpClient();
+				if (s_server.Pending() == false)
+				{
+					continue;
+				}
+
+				TcpClient client = s_server.AcceptTcpClient();
 				Console.WriteLine("Client connected.");
 
 				Task.Run(() => ProcessClient(client));
 			}
 		}
-		catch (Exception ex)
+		catch (Exception exception)
 		{
-			Console.WriteLine("Error accepting client connection: " + ex.Message);
+			Console.WriteLine("Error accepting client connection: " + exception.Message);
 		}
 	}
 
@@ -103,9 +98,9 @@ class ServerSocket
 				}
 			}
 		}
-		catch (Exception ex)
+		catch (Exception exception)
 		{
-			Console.WriteLine("Error processing client request: " + ex.Message);
+			Console.WriteLine("Error processing client request: " + exception.Message);
 		}
 		finally
 		{
@@ -113,9 +108,9 @@ class ServerSocket
 			{
 				client.Close();
 			}
-			catch (Exception closeEx)
+			catch (Exception closeException)
 			{
-				Console.WriteLine("Error closing client connection: " + closeEx.Message);
+				Console.WriteLine("Error closing client connection: " + closeException.Message);
 			}
 		}
 	}
@@ -129,7 +124,7 @@ class ServerSocket
 		else if (command.Trim().StartsWith("Exit", StringComparison.OrdinalIgnoreCase))
 		{
 			Console.WriteLine("Exit command received. Closing connection...");
-			_isRunning = false;
+			s_isRunning = false;
 		}
 		else
 		{
@@ -152,10 +147,10 @@ class ServerSocket
 				SendResponse(stream, "File created successfully.");
 				Console.WriteLine("File created successfully");
 			}
-			catch (Exception ex)
+			catch (Exception exception)
 			{
-				SendResponse(stream, "Error creating file: " + ex.Message);
-				Console.WriteLine("Error creating file: " + ex.Message);
+				SendResponse(stream, "Error creating file: " + exception.Message);
+				Console.WriteLine("Error creating file: " + exception.Message);
 			}
 		}
 		else

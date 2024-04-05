@@ -59,10 +59,10 @@ namespace WinFormsApp1
 		{
 			_exitButton = new Button();
 			_exitButton.Text = "Exit";
-			_exitButton.Location = new System.Drawing.Point(10, 130); // выберите подходящее местоположение для кнопки
+			_exitButton.Location = new System.Drawing.Point(10, 130);
 			_exitButton.Size = new System.Drawing.Size(80, 20);
-			_exitButton.Click += ExitButton_Click; // добавляем обработчик события Click
-			_exitButton.Visible = false; // Скрываем кнопку ExitButton
+			_exitButton.Click += ExitButton_Click;
+			_exitButton.Visible = false;
 			this.Controls.Add(_exitButton);
 
 			_connectButton = new Button();
@@ -77,17 +77,15 @@ namespace WinFormsApp1
 		{
 			try
 			{
-				// Отправляем команду "Exit" на сервер
 				string exitCommand = "Exit";
 				string response = _serverCommunication.SendDataToServer(exitCommand);
 
-				// Закрываем поток и клиент
 				_serverCommunication.CloseConnection();
 
-				// Выводим сообщение об успешном отключении от сервера
-				MessageBox.Show("Disconnected from the server.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show("Disconnected from the server.", "Success", MessageBoxButtons.OK, 
+					MessageBoxIcon.Information);
 
-				Application.Exit(); // Закрываем приложение
+				Application.Exit();
 			}
 			catch (Exception ex)
 			{
@@ -117,34 +115,32 @@ namespace WinFormsApp1
 
 			if (!int.TryParse(_portTextBox.Text, out int port) || port < 1 || port > 65535)
 			{
-				MessageBox.Show("Please enter a valid port number between 1 and 65535.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Please enter a valid port number between 1 and 65535.", "Error", 
+					MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
 			try
 			{
-				// Пингуем удаленный хост
 				using (var ping = new Ping())
 				{
 					var reply = ping.Send(ipAddress);
 
-					// Проверяем доступность хоста
 					if (reply.Status != IPStatus.Success)
 					{
-						MessageBox.Show($"The server at {ipAddress} is not reachable.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						MessageBox.Show($"The server at {ipAddress} is not reachable.", "Error", 
+							MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
 				}
 
-				// Создаем TcpClient и подключаемся к серверу
 				_client = new TcpClient();
-				_client.Connect(ipAddress, port); // Подключаемся к серверу по указанному IP-адресу и порту
+				_client.Connect(ipAddress, port);
 
-				// Создаем объект для взаимодействия с сервером
 				_serverCommunication = new ServerCommunication(_client);
 
-				// Отображаем сообщение об успешном подключении (можно изменить на ваше сообщение)
-				MessageBox.Show("Connected to the server.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show("Connected to the server.", "Success", MessageBoxButtons.OK, 
+					MessageBoxIcon.Information);
 
 				_exitButton.Visible = true;
 
@@ -152,18 +148,17 @@ namespace WinFormsApp1
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show($"Error connecting to the server: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"Error connecting to the server: {ex.Message}", "Error", MessageBoxButtons.OK, 
+					MessageBoxIcon.Error);
 			}
 		}
 
 		private void ShowFileControls()
 		{
-			// Скрытие элементов управления для ввода IP-адреса и порта, а также кнопки Connect
-			_ipAddressTextBox.Visible = false;
-			_portTextBox.Visible = false;
-			_connectButton.Visible = false;
+			this.Controls.Remove(_ipAddressTextBox);
+			this.Controls.Remove( _portTextBox);
+			this.Controls.Remove(_connectButton);
 
-			// Отображение элементов управления для ввода имени файла, текста файла и кнопок
 			_serverIpAndFileNameLabel.Text = "Enter file name:";
 
 			_fileNameTextBox = new TextBox();
@@ -193,68 +188,62 @@ namespace WinFormsApp1
 			{
 				if (_client == null || _client.Connected == false)
 				{
-					MessageBox.Show("The client is not connected to the server.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("The client is not connected to the server.", "Error", MessageBoxButtons.OK, 
+						MessageBoxIcon.Error);
 					return;
 				}
 
 				if (string.IsNullOrWhiteSpace(_fileNameTextBox.Text))
 				{
-					MessageBox.Show("Please enter the file name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("Please enter the file name", "Error", MessageBoxButtons.OK, 
+						MessageBoxIcon.Error);
 					return;
 				}
 
 				if (string.IsNullOrWhiteSpace(_dataTextBox.Text))
 				{
-					MessageBox.Show("Please enter the file content", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("Please enter the file content", "Error", MessageBoxButtons.OK, 
+						MessageBoxIcon.Error);
 					return;
 				}
 
-				// Формируем данные для отправки на сервер
 				string fileName = _fileNameTextBox.Text;
 				string fileContent = _dataTextBox.Text;
 				string dataToSend = "CreateFile|" + fileName + "|" + fileContent;
 
-				// Отправляем данные на сервер
 				string response = _serverCommunication.SendDataToServer(dataToSend);
 
 				if (response == "Invalid command.")
 				{
-					// Если полученное сообщение - "Invalid command.", выводим его в MessageBox с ошибкой
 					MessageBox.Show(response, "Server Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 				else
 				{
-					// В противном случае, выводим ответное сообщение от сервера с помощью MessageBox
 					MessageBox.Show(response, "Server Response", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
-			catch (Exception ex)
+			catch (Exception exception)
 			{
-				Console.WriteLine("Error: " + ex.Message);
+				Console.WriteLine("Error: " + exception.Message);
 			}
 		}
 
 		private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			// Проверяем, был ли создан клиент и сетевой поток
 			if (_client != null)
 			{
-				// Проверяем, открыт ли сетевой поток
 				if (_stream != null)
 				{
-					_stream.Close(); // Закрываем сетевой поток
+					_stream.Close();
 				}
-				_client.Close(); // Закрываем клиент
+				_client.Close();
 			}
 		}
 
 		private void PortTextBox_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			// Разрешаем ввод только цифр и клавиш управления (например, Backspace)
 			if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
 			{
-				// Если введенный символ не является цифрой и не является клавишей управления,
-				// то отменяем событие ввода, чтобы символ не отображался в текстовом поле
 				e.Handled = true;
 			}
 		}

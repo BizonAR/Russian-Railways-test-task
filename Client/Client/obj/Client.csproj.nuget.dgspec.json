@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mikaa\\OneDrive\\Документы\\Client\\Client\\Client.csproj": {}
+    "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Client\\Client\\Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mikaa\\OneDrive\\Документы\\Client\\Client\\Client.csproj": {
+    "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Client\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mikaa\\OneDrive\\Документы\\Client\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Client\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Users\\mikaa\\OneDrive\\Документы\\Client\\Client\\Client.csproj",
+        "projectPath": "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Client\\Client\\Client.csproj",
         "packagesPath": "C:\\Users\\mikaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mikaa\\OneDrive\\Документы\\Client\\Client\\obj\\",
+        "outputPath": "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Client\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mikaa\\AppData\\Roaming\\NuGet\\NuGet.Config",

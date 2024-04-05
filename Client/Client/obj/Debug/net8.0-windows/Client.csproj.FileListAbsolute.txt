@@ -1,0 +1,17 @@
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Debug\net8.0-windows\Client.exe
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Debug\net8.0-windows\Client.deps.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Debug\net8.0-windows\Client.runtimeconfig.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Debug\net8.0-windows\Client.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Debug\net8.0-windows\Client.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\WinFormsApp1.ClientForm.resources
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.csproj.GenerateResource.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.AssemblyInfoInputs.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.AssemblyInfo.cs
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.csproj.CoreCompileInputs.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.sourcelink.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\refint\Client.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\Client.genruntimeconfig.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\obj\Debug\net8.0-windows\ref\Client.dll
