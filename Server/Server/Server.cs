@@ -1,13 +1,18 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 
 class ServerSocket
 {
 	private static bool s_isRunning = true; // Флаг для контроля состояния сервера
 	private static TcpListener s_server;
+	private static List<Task> s_clientTasks = new List<Task>();
 
-	public static void Main(string[] args)
+	public static async Task Main(string[] args)
 	{
 		try
 		{
@@ -17,11 +22,12 @@ class ServerSocket
 
 			Console.WriteLine("Waiting for connections...");
 
-			Task.Run(() => ListenForClients());
+			Task listenTask = ListenForClients();
 
-			while (s_isRunning)
-			{
-			}
+			await listenTask; // Ожидаем завершения слушающей задачи
+
+			// Ждем завершения всех клиентских задач
+			await Task.WhenAll(s_clientTasks);
 
 			StopServer();
 			Console.WriteLine("Server closed.");
@@ -49,11 +55,12 @@ class ServerSocket
 
 	private static void StopServer()
 	{
+		s_isRunning = false;
 		s_server?.Stop();
 		Console.WriteLine("Server stopped.");
 	}
 
-	private static void ListenForClients()
+	private static async Task ListenForClients()
 	{
 		try
 		{
@@ -64,10 +71,11 @@ class ServerSocket
 					continue;
 				}
 
-				TcpClient client = s_server.AcceptTcpClient();
+				TcpClient client = await s_server.AcceptTcpClientAsync();
 				Console.WriteLine("Client connected.");
 
-				Task.Run(() => ProcessClient(client));
+				Task clientTask = ProcessClient(client);
+				s_clientTasks.Add(clientTask); // Добавляем задачу в список
 			}
 		}
 		catch (Exception exception)
@@ -76,13 +84,13 @@ class ServerSocket
 		}
 	}
 
-	public static void ProcessClient(TcpClient client)
+	public static async Task ProcessClient(TcpClient client)
 	{
 		try
 		{
 			using (NetworkStream stream = client.GetStream())
 			{
-				while (true)
+				while (s_isRunning)
 				{
 					if (client.Connected == false)
 					{
@@ -91,7 +99,7 @@ class ServerSocket
 					}
 
 					byte[] buffer = new byte[1024];
-					int bytesRead = stream.Read(buffer, 0, buffer.Length);
+					int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
 					string dataReceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
 					HandleClientCommand(dataReceived, stream);
@@ -104,6 +112,8 @@ class ServerSocket
 		}
 		finally
 		{
+			// Удаляем завершенную задачу из списка
+			s_clientTasks.RemoveAll(task => task.Id == Task.CurrentId);
 			try
 			{
 				client.Close();
@@ -124,7 +134,7 @@ class ServerSocket
 		else if (command.Trim().StartsWith("Exit", StringComparison.OrdinalIgnoreCase))
 		{
 			Console.WriteLine("Exit command received. Closing connection...");
-			s_isRunning = false;
+			s_isRunning = false; // Остановка обработки новых клиентов
 		}
 		else
 		{
