@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 class ServerSocket
 {
-	private static bool s_isRunning = true; // Флаг для контроля состояния сервера
+	private static bool s_isRunning = true;
 	private static TcpListener s_server;
 	private static List<Task> s_clientTasks = new List<Task>();
 
@@ -24,9 +24,8 @@ class ServerSocket
 
 			Task listenTask = ListenForClients();
 
-			await listenTask; // Ожидаем завершения слушающей задачи
+			await listenTask;
 
-			// Ждем завершения всех клиентских задач
 			await Task.WhenAll(s_clientTasks);
 
 			StopServer();
@@ -75,7 +74,7 @@ class ServerSocket
 				Console.WriteLine("Client connected.");
 
 				Task clientTask = ProcessClient(client);
-				s_clientTasks.Add(clientTask); // Добавляем задачу в список
+				s_clientTasks.Add(clientTask);
 			}
 		}
 		catch (Exception exception)
@@ -112,7 +111,6 @@ class ServerSocket
 		}
 		finally
 		{
-			// Удаляем завершенную задачу из списка
 			s_clientTasks.RemoveAll(task => task.Id == Task.CurrentId);
 			try
 			{
@@ -134,7 +132,7 @@ class ServerSocket
 		else if (command.Trim().StartsWith("Exit", StringComparison.OrdinalIgnoreCase))
 		{
 			Console.WriteLine("Exit command received. Closing connection...");
-			s_isRunning = false; // Остановка обработки новых клиентов
+			s_isRunning = false;
 		}
 		else
 		{
