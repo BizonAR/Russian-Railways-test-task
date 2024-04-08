@@ -1,0 +1,2 @@
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Release\net8.0-windows\publish\win-x86\Client.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Client\Client\bin\Release\net8.0-windows\publish\win-x86\Client.exe

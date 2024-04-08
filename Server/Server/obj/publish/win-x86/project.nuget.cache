@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HRCoPS1HC3dC4yY/77xjX+H9BGGfT4jBdZRaMsSIJs8zmk0unvxw5zugCUF1HeLbKkV20GP46hhYl+0/slTMzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mikaa\\OneDrive\\Документы\\RZD\\Server\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mikaa\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

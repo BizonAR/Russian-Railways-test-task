@@ -1,0 +1,15 @@
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\win-x86\Server.exe
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\win-x86\Server.deps.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\win-x86\Server.runtimeconfig.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\win-x86\Server.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\win-x86\Server.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.AssemblyInfoInputs.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.AssemblyInfo.cs
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.csproj.CoreCompileInputs.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.sourcelink.json
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\refint\Server.dll
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\Server.genruntimeconfig.cache
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\obj\Release\net8.0\win-x86\ref\Server.dll

@@ -1,0 +1,2 @@
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\publish\win-x86\Server.pdb
+C:\Users\mikaa\OneDrive\Документы\RZD\Server\Server\bin\Release\net8.0\publish\win-x86\Server.exe

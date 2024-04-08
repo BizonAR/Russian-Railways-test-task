@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\servercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\servercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|c:\\users\\mikaa\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\rzd\\client\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\client.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\client.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\servercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|solutionrelative:client\\servercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39FE476D-1FA6-4723-994C-ADB2B3F955CE}|Client\\Client.csproj|C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\client\\client.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
@@ -34,47 +34,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.cs",
               "RelativeDocumentMoniker": "Client\\Client.cs",
               "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.cs",
               "RelativeToolTip": "Client\\Client.cs",
-              "ViewState": "AQIAAO8AAAAAAAAAAAAAwJcAAAAFAAAA",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAiwPsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T20:59:11.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.cs",
               "RelativeDocumentMoniker": "Client\\Client.cs",
-              "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Client\\Client\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "..\\..\\Client\\Client\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "Client\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T20:59:06.209Z"
+              "WhenOpened": "2024-04-04T20:59:06.209Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ServerCommunication.cs",
               "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\ServerCommunication.cs",
               "RelativeDocumentMoniker": "Client\\ServerCommunication.cs",
               "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\ServerCommunication.cs",
               "RelativeToolTip": "Client\\ServerCommunication.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T20:58:51.411Z"
+              "WhenOpened": "2024-04-04T20:58:51.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
@@ -82,7 +84,8 @@
               "RelativeToolTip": "Client\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T20:58:48.45Z"
+              "WhenOpened": "2024-04-04T20:58:48.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,11 +96,12 @@
               "ToolTip": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.resx",
               "RelativeToolTip": "Client\\Client.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-04-04T20:58:34.939Z"
+              "WhenOpened": "2024-04-04T20:58:34.939Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Client.Designer.cs",
               "DocumentMoniker": "C:\\Users\\mikaa\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\RZD\\Client\\Client\\Client.Designer.cs",
               "RelativeDocumentMoniker": "Client\\Client.Designer.cs",
@@ -105,7 +109,8 @@
               "RelativeToolTip": "Client\\Client.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T20:57:40.232Z"
+              "WhenOpened": "2024-04-04T20:57:40.232Z",
+              "EditorCaption": ""
             }
           ]
         }
